@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<!-- jQuery latest version -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- Bootstrap addon for forms -->
+	<!-- CSS Stylesheet -->
+	<link rel="stylesheet" href="bootstrap/scripts/bootstrap.min.css" media="all">
+	<!-- Bootstrap validator addon for forms -->
+	<script type="text/javascript" src="bootstrap/scripts/bootstrap_validator.js"></script>
+
+	<!-- Custom fonts: -->
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+	</style>
+
+	<!-- Stylesheet: -->
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+	<!-- ######################################## First page ######################################## -->
+	<!-- Warnings! -->
+	<div id="resolutionWarning">
+		<h4 align="center"> You are seeing this message because the size of your browser window is too small to properly display the content of the experiment. Please maximize to view the desired content. </h4>
+	</div>
+	<div id="deviceWarning">
+		<h4 align="center"> You are seeing this message because our internal check detected you are using a mobile device or a tablet. Please try to access our study from a desktop computer or laptop. </h4>
+	</div>
+	<div id="touchWarning">
+		<h4 align="center"> You are seeing this message because our internal check detected you are using touchscreen input on your device. This task is only compatible with keyboard and mouse. If you have an alternative to touchscreen input, please refresh this page to continue.</h4>
+	</div>
+
+	<!-- First page view -->
+	<div id="firstPage">
+		<div class="banner_container">
+			<div class="banner">
+				<span class="left_border"></span>
+				<span class="image_container"></span>
+			</div>
+		</div>
+
+		<div id="buffer"></div>
+		<div id="body_container">
+			<div id="main">
+				<h2>This is a modified version of an online experiment. </h2>
+				<p>
+					The following experiment is provided as a showcase of the experiment and experimental code, and is made public for others to view and use the code if they wish. 
+				</p>
+	
+				<p>
+					<h3>Study aims</h3>
+					This study was conducted as a way of investigating visual working memory - the ability to hold in mind visual features such as orientation, colour, and shape. The purpose of this research is to better understand the nature of memory storage and how it changes over time. Specifically, this study was looking at <i> dynamic </i> visual working memory, the ability to hold in mind information about moving or changing objects.
+				</p>
+				
+				<div class="start-container">
+					<button onclick="checkID()" id="start-button">Begin experiment</input>
+					<span class="glyphicon glyphicon-send"></span>
+				</div>
+
+				<p>
+					<b> Note: </b> Your data cannot be saved using this version of the code, unless a MongoDB server is set up.
+				</p>
+				<p class="small">
+					<i><b>Code author: </b>Rodrigo Raimundo</i>
+				</p>
+			</div>
+		</div>
+		<div id="buffer"></div>
+	</div>
+	<!-- ######################################## First page ######################################## -->
+
+	<canvas id="myCanvas" style='position:absolute; left:0px; top:0px;'>
+		Your browser does not support the HTML5 canvas tag. You cannot run the experiment in this browser.
+	</canvas>
+
+	<!-- ######################################### SCRIPTS ######################################### -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.3.10/seedrandom.min.js"></script>
+	<script src="subscripts/mathsFuncs.js"></script>
+	<script src="subscripts/genArrays.js"></script>
+	<script src="subscripts/displayAnimations.js"></script>
+	<script src="experiment.js"></script>
+
+</body>
+
+</html>
